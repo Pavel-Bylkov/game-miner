@@ -1,7 +1,7 @@
 import pygame as pg
 
 from tools.constants import *
-from tools.game_classes import Wall
+from tools.game_classes import Wall, Hero
 
 pg.init()
 
@@ -15,6 +15,8 @@ walls.add(
     Wall(img=IMG_WALL, x=WIN_X//2, y=WIN_Y//2, size_x=WIN_X//2, size_y=50)
 )
 
+hero = Hero(imgs=IMGS_HERO, x=50, y=WIN_Y-150, size_x=60, size_y=95, speed=10)
+
 clock = pg.time.Clock()
 run = True
 while run:
@@ -23,5 +25,11 @@ while run:
             run = False
     window.blit(background, (0, 0))
     walls.draw(window)
+    hero.update()
+    hero.reset(window)
+    if hero.check_air(walls):
+        hero.gravity = GRAVITY
+    else:
+        hero.gravity = 0
     pg.display.update()
     clock.tick(FPS)
