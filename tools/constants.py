@@ -9,3 +9,5 @@ IMG_FON = f"img{os.sep}brick-wall.jpg"
 IMG_WALL = f"img{os.sep}plat.png"
 IMG_WALL_L = f"img{os.sep}plat_l.png"
 IMG_WALL_R = f"img{os.sep}plat_r.png"
+
+IMGS_HERO = [f"img{os.sep}Asset 59@4x.png", f"img{os.sep}Asset 73@4x.png", f"img{os.sep}Asset 60@4x.png"]
