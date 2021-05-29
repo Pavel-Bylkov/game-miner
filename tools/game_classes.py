@@ -100,7 +100,7 @@ class Enemy(pg.sprite.Sprite):
 
     def next_skin(self):
         x, y = self.rect.centerx, self.rect.centery
-        if self.current_skin < len(self.imgs_left):
+        if self.current_skin < len(self.imgs_left) - 1:
             self.current_skin += 1
         else:
             self.current_skin = 0
@@ -123,5 +123,5 @@ class Enemy(pg.sprite.Sprite):
             self.rect.x -= self.speed
         if self.direction == "right":
             self.rect.x += self.speed
-        if time() - self.last_time > 0.5:
+        if time() - self.last_time > 2:  # устанавливаем скорость смены костюмов в секундах
             self.next_skin()
