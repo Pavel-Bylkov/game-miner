@@ -65,3 +65,11 @@ class Hero(Person):
             if self.direction != "right":
                 self.change_skin(direction="right")
             self.rect.x += self.speed
+
+
+class Enemy(Person):
+    def __init__(self, imgs: list, x: int, y: int, size_x: int, size_y: int, speed: int):
+        super().__init__(imgs, x, y, size_x, size_y, speed)
+
+    def update(self):
+        if
