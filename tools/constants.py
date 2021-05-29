@@ -13,3 +13,6 @@ IMG_WALL_L = f"img{os.sep}plat_l.png"
 IMG_WALL_R = f"img{os.sep}plat_r.png"
 # списки картинок персонажей [левая, спина, правая]
 IMGS_HERO = [f"img{os.sep}Asset 59@4x.png", f"img{os.sep}Asset 73@4x.png", f"img{os.sep}Asset 60@4x.png"]
+
+IMGS_ENEMY = [f"img{os.sep}spider{os.sep}shutterstock_783589831-[Converted]-{i}.png" for i in range(2, 29)]
+
